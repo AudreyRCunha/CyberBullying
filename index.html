@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberPaz - Diga Não ao Cyberbullying | Projeto Audrey</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navegação -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Cyber<span class="highlight">Paz</span></span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#historias">Histórias</a></li>
+          <li><a href="#quiz">Quiz: O que fazer?</a></li>
+          <li><a href="#ajuda">Dicas & Ajuda</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Hero -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-content">
+      <span class="badge">Projeto STEAM 2026 • Criado por Audrey (12 anos)</span>
+      <h1>A internet precisa ser um lugar de <span class="gradient-text">respeito e acolhimento</span></h1>
+      <p class="hero-desc">
+        O cyberbullying não é apenas uma brincadeira: ele machuca de verdade. 
+        Conheça as histórias do <strong>Henrique</strong> e da <strong>Sara</strong>, 
+        aprenda a reconhecer os sinais e jogue o nosso quiz interativo para saber como agir!
+      </p>
+      <div class="hero-buttons">
+        <a href="#historias" class="btn btn-primary">📖 Ler as Histórias</a>
+        <a href="#quiz" class="btn btn-secondary">🎮 Jogar o Quiz</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Histórias -->
+  <section id="historias" class="section stories-section">
+    <div class="section-header">
+      <span class="section-tag">Relatos Reais</span>
+      <h2>Histórias que nos fazem refletir</h2>
+      <p>Entender a dor do outro é o primeiro passo para criar uma rede mais segura.</p>
+    </div>
+
+    <!-- Card 1: Henrique -->
+    <div class="story-card reverse">
+      <div class="story-image-wrapper">
+        <img src="images/henrique.jpg" alt="Ilustração do Henrique" class="story-img" onerror="this.src='images/placeholder_boy.svg'">
+        <div class="character-tag">Henrique • 16 anos</div>
+      </div>
+      <div class="story-text">
+        <div class="story-badge gaming">🎮 Cyberbullying nos Jogos Online</div>
+        <h3>A partida que deixou de ser divertida</h3>
+        <p>
+          Henrique é um rapaz de 16 anos que gosta de jogar videojogos e conversar com os amigos pela internet. 
+          Um dia, durante uma partida online, começa a receber mensagens ofensivas de outros jogadores, que riem de sua aparência e da forma como joga.
+        </p>
+        <p>
+          No início, Henrique tenta não dar importância, mas as ofensas continuam. Mais tarde, descobre que criaram um grupo nas redes sociais para rir dele. 
+          Fica triste, perde a vontade de jogar e começa a evitar os amigos.
+        </p>
+        <div class="story-quote">
+          "Certo dia, recebe mais uma mensagem humilhante e decide que não pode continuar a viver daquela maneira."
+        </div>
+        <button class="btn btn-action" onclick="abrirQuizCenario(0)">Qual o melhor caminho para o Henrique? →</button>
+      </div>
+    </div>
+
+    <!-- Card 2: Sara -->
+    <div class="story-card">
+      <div class="story-image-wrapper">
+        <img src="images/sara.jpg" alt="Ilustração da Sara" class="story-img">
+        <div class="character-tag">Sara • 15 anos</div>
+      </div>
+      <div class="story-text">
+        <div class="story-badge social">📱 Cyberbullying nas Redes Sociais</div>
+        <h3>Quando uma foto vira motivo de dor</h3>
+        <p>
+          Sara é uma adolescente de 15 anos que adora desenhar, ouvir música e conversar com os amigos nas redes sociais. 
+          Um dia, ao entrar no telemóvel, percebe que alguém publicou uma fotografia sua com comentários maldosos e humilhantes.
+        </p>
+        <p>
+          No início, Sara tenta ignorar, mas os comentários começam a aumentar. 
+          Alguns colegas partilham a publicação e outros começam a rir-se dela na escola. 
+          Sara sente-se triste, envergonhada e começa a afastar-se dos amigos.
+        </p>
+        <div class="story-quote">
+          "Numa noite, recebe mais uma mensagem ofensiva e percebe que precisa de fazer alguma coisa."
+        </div>
+        <button class="btn btn-action" onclick="abrirQuizCenario(1)">Qual o melhor caminho para a Sara? →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção do Quiz Interativo -->
+  <section id="quiz" class="section quiz-section">
+    <div class="section-header">
+      <span class="section-tag">Jogo Interativo</span>
+      <h2>Quiz: "O que fazer agora?"</h2>
+      <p>Coloque-se no lugar deles e descubra qual é a escolha mais saudável e corajosa.</p>
+    </div>
+
+    <div class="quiz-container">
+      
+      <!-- Indicador de Cenários -->
+      <div class="scenario-tabs">
+        <button class="tab-btn active" id="tab-0" onclick="mudarCenario(0)">Cenário 1: O Henrique</button>
+        <button class="tab-btn" id="tab-1" onclick="mudarCenario(1)">Cenário 2: A Sara</button>
+        <button class="tab-btn" id="tab-2" onclick="mudarCenario(2)">Cenário 3: Você é o Amigo</button>
+      </div>
+
+      <!-- Caixa Principal de Perguntas -->
+      <div class="quiz-box" id="quiz-question-box">
+        <div class="scenario-intro">
+          <span class="scenario-number" id="quiz-scenario-title">Cenário 1 de 3</span>
+          <h3 id="quiz-question-text">Henrique está recebendo ofensas no jogo e criaram um grupo para zoar dele. O que ele deve fazer?</h3>
+        </div>
+
+        <div class="options-grid" id="quiz-options-container">
+          <!-- As opções são geradas dinamicamente pelo JavaScript -->
+        </div>
+      </div>
+
+      <!-- Cena de Resposta Incorreta (Audrey: "Não, isso só vai piorar. Volte") -->
+      <div class="quiz-feedback-box wrong-box hidden" id="quiz-wrong-scene">
+        <div class="feedback-icon">⚠️</div>
+        <h3>Não! Isso só vai piorar a situação...</h3>
+        <p id="wrong-explanation-text">
+          Responder com mais ofensas ou brigar na internet só dá mais atenção aos agressores e cria uma bola de neve.
+        </p>
+        <button class="btn btn-back" onclick="voltarParaPergunta()">
+          ↩️ Voltar e tentar outra opção
+        </button>
+      </div>
+
+      <!-- Cena de Resposta Correta -->
+      <div class="quiz-feedback-box correct-box hidden" id="quiz-correct-scene">
+        <div class="feedback-icon">🌟</div>
+        <h3>Parabéns! Essa é a decisão certa!</h3>
+        <p id="correct-explanation-text">
+          Tirar prints das provas, bloquear os perfis ofensivos, denunciar nas plataformas e, principalmente, 
+          <strong>conversar com os pais, responsáveis ou professores</strong> e buscar apoio emocional (como terapia) é o caminho mais seguro e corajoso!
+        </p>
+        <div class="feedback-actions">
+          <button class="btn btn-primary" id="btn-next-scenario" onclick="proximoCenario()">
+            Avançar para o Próximo Cenário ➔
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Seção de Dicas & Apoio -->
+  <section id="ajuda" class="section help-section">
+    <div class="section-header">
+      <span class="section-tag">Apoio & Ação</span>
+      <h2>Guia Rápido: Se acontecer com você ou um amigo</h2>
+      <p>Lembre-se: a culpa NUNCA é de quem sofre a agressão.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="help-card">
+        <div class="card-icon">📸</div>
+        <h4>1. Guarde as Provas</h4>
+        <p>Não apague as mensagens de imediato. Tire <strong>prints (capturas de tela)</strong> mostrando o nome de usuário, a data, a hora e o link da postagem.</p>
+      </div>
+
+      <div class="help-card">
+        <div class="card-icon">🚫</div>
+        <h4>2. Bloqueie e Não Responda</h4>
+        <p>Quem pratica bullying quer atenção e reação. Não responda no calor do momento. Bloqueie o agressor e denuncie o perfil na própria rede ou jogo.</p>
+      </div>
+
+      <div class="help-card">
+        <div class="card-icon">🗣️</div>
+        <h4>3. Quebre o Silêncio</h4>
+        <p>Conte imediatamente para os pais, responsáveis, professores ou orientação da escola. Guardar tudo para si só faz o peso aumentar.</p>
+      </div>
+
+      <div class="help-card">
+        <div class="card-icon">🧠</div>
+        <h4>4. Apoio Emocional & Terapia</h4>
+        <p>Conversar com um psicólogo ou terapeuta ajuda a recuperar a autoestima e a entender que o problema está em quem ataca, e não em você.</p>
+      </div>
+    </div>
+
+    <!-- Onde Denunciar -->
+    <div class="hotlines-box">
+      <h3>📞 Canais Gratuitos de Ajuda e Denúncia no Brasil:</h3>
+      <div class="hotlines-list">
+        <div class="hotline-item">
+          <strong>SaferNet Brasil:</strong>
+          <span>Orientações anônimas e canal de denúncia para crimes na internet: <a href="https://new.safernet.org.br/helpline" target="_blank" rel="noopener">safernet.org.br</a></span>
+        </div>
+        <div class="hotline-item">
+          <strong>Disque 100:</strong>
+          <span>Disque Direitos Humanos (gratuito, anônimo e funciona 24h por dia).</span>
+        </div>
+        <div class="hotline-item">
+          <strong>CVV (Apoio Emocional):</strong>
+          <span>Ligue <strong>188</strong> ou acesse <a href="https://www.cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a> para conversar com alguém acolhedor.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p><strong>CyberPaz</strong> — Site criado com carinho pela <strong>Audrey</strong> (12 anos) para o projeto STEAM 2026.</p>
+      <p class="sub-footer">Juntos podemos construir uma internet mais gentil, segura e acolhedora para todo mundo. ✨</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
